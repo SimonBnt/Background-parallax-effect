@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     animation-name: slide-left-right;
-    animation-duration: 24s;
+    animation-duration: 20s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
@@ -29,6 +29,10 @@
     --parallax-translate-x: 0;
     --parallax-translate-y: 0;
     transform: translateX(var(--parallax-translate-x)) translateY(var(--parallax-translate-y));
+}
+
+.hoveredBackgroundIcon {
+    transform: scale(1.5);
 }
 
                     /* rows */
