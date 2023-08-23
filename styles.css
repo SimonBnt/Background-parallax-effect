@@ -4,7 +4,7 @@
     /* Smartphone @media querie */
 
 @media only screen and (max-width: 767px) {
-    .hideIconContainerForSmartphone  {
+    .disableIconContainerForSmartphone  {
         display: none;
     }
 }
@@ -12,7 +12,7 @@
     /* Ipad @media querie */
         
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .hideIconContainerForIpad {
+    .disableIconContainerForIpad {
         display: none;
     }
 }
@@ -24,7 +24,6 @@
         transform: scale(1.5);
     }
 }
-
 
 #iconMainContainer {
     position: absolute;
