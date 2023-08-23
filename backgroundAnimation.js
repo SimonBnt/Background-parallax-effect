@@ -4,7 +4,7 @@ const homeSection = document.getElementById("homeSection")
 document.addEventListener("mousemove", parallax)
 
 icons.forEach(icon => {
-    icon.addEventListener("mousemove", animateIcon)
+    icon.addEventListener("mouseenter", animateIcon)
     icon.addEventListener("mouseleave", animateIcon)
 })
 
