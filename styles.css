@@ -1,15 +1,48 @@
+
+    /* ---- Responsive rules ---- */
+                    
+    /* Smartphone @media querie */
+
+@media only screen and (max-width: 767px) {
+    .hideIconContainerForSmartphone  {
+        display: none;
+    }
+}
+
+    /* Ipad @media querie */
+        
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .hideIconContainerForIpad {
+        display: none;
+    }
+}
+
+    /* Ipad @media querie */
+        
+@media only screen and (min-width: 1024px) {
+    .hoveredBackgroundIcon {
+        transform: scale(1.5);
+    }
+}
+
+
 #iconMainContainer {
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
+    z-index: -1;
+    opacity: 0.6;
+
+    /* Animation here */
+
     animation-name: slide-left-right;
     animation-duration: 32s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    display: flex;
-    z-index: -1;
-    opacity: 0.6;
 }
+
+    /* ---- Animation css left-right infiny ---- */
 
 @keyframes slide-left-right {
     0%, 100% {
@@ -29,6 +62,9 @@
 
 .backgroundIcon {
     transition: 1s;
+
+    /* ---- Parallax from Js ---- */
+
     --parallax-translate-x: 0;
     --parallax-translate-y: 0;
     transform: translateX(var(--parallax-translate-x)) translateY(var(--parallax-translate-y));
@@ -41,11 +77,10 @@
     width: 48px;
 }
 
-.hoveredBackgroundIcon {
-    transform: scale(1.5);
-}
 
-                    /* rows */
+    /* ---- Icons arrangement ---- */
+
+    /* rows */
 
 .backgroundIcon:nth-child(1), .backgroundIcon:nth-child(2), .backgroundIcon:nth-child(3), .backgroundIcon:nth-child(16) {
     grid-row: 1/6;
@@ -71,7 +106,7 @@
     grid-row: 6/6;
 }
 
-                    /* columns */
+    /* columns */
 
 .backgroundIcon:nth-child(1) {
     grid-column: 2/12;
