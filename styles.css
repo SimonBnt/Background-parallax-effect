@@ -28,11 +28,17 @@
 }
 
 .backgroundIcon {
-    width: 64px;
     transition: 1s;
     --parallax-translate-x: 0;
     --parallax-translate-y: 0;
     transform: translateX(var(--parallax-translate-x)) translateY(var(--parallax-translate-y));
+}
+
+.backgroundIcon:nth-child(odd) {
+    width: 64px;
+}
+.backgroundIcon:nth-child(even) {
+    width: 48px;
 }
 
 .hoveredBackgroundIcon {
