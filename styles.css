@@ -22,13 +22,7 @@ body {
 
 h1 {
     color: #fd7a00;
-    font-size: 1.5rem;
-}
-
-h2 {
     font-family: 'Courier New', Courier, monospace;
-    color: white;
-    font-size: 4rem;
 }
 
 #iconMainContainer {
@@ -297,6 +291,10 @@ a {
     .disableIconContainerForIpad {
         display: none !important;
     }
+
+    h1 {
+        font-size: 3rem;
+    }
 }
 
     /* Computer @media querie */
@@ -311,7 +309,7 @@ a {
     }   
 
     h1 {
-        font-size: 2rem;
+        font-size: 4rem;
     }
 
     #burgerMenuContentContainer {
