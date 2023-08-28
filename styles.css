@@ -15,6 +15,7 @@ body {
     overflow: hidden; 
     height: 400px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border-bottom: #fd7a00 solid 2px;
@@ -24,10 +25,16 @@ h2, h1 {
     color: #fd7a00;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    margin: 0;
 }
 
 h2 {
     text-transform: uppercase;
+}
+
+#condition {
+    color: white;
+    font-size: 1.5rem;
 }
 
 #iconMainContainer {
@@ -239,6 +246,7 @@ a {
     font-size: 2.5rem;
     justify-self: end;
     margin: 1rem 1rem 0 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #contactIconsContainer {
@@ -313,21 +321,46 @@ a {
         flex-direction: column;
     }
 
+    h1 {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
     h2 {
-        margin-bottom: 1rem;
-        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    #disableParallaxBtn {
+        font-size: 1.5rem;
+    }
+    
+    #parallaxStateMessage {
+        font-size: 1rem;
     }
 }
 
     /* Ipad @media querie */
         
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) {
     .disableIconContainerForIpad {
         display: none !important;
     }
 
+    h1 {
+        font-size: 1.25rem;
+        margin: 0 4rem;
+    }
+
     h2 {
-        font-size: 3rem;
+        font-size: 2.25rem;
+    }
+
+    #disableParallaxBtn {
+        font-size: 1.75rem;
+    }
+    
+    #parallaxStateMessage {
+        font-size: 1.5rem;
     }
 }
 
