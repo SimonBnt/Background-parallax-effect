@@ -1,8 +1,9 @@
 html {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     background-color: #333;
