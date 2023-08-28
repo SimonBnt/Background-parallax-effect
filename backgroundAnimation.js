@@ -1,7 +1,33 @@
 const icons = document.querySelectorAll(".backgroundIcon")
 const homeSection = document.getElementById("homeSection")
+const disableParallaxBtn = document.getElementById("disableParallaxBtn")
+const parallaxStateMessage = document.getElementById("parallaxStateMessage")
+const h1TxtContent = document.getElementById("h1TxtContent")
+
+let disableParallaxBtnClicked = false
+
+disableParallaxBtn.innerHTML = "disable Parallax"
+h1TxtContent.innerHTML = "Parallax Backgroud"
 
 document.addEventListener("mousemove", parallax)
+
+disableParallaxBtn.addEventListener("click", function() {
+    disableParallaxBtnClicked = !disableParallaxBtnClicked
+
+    if (disableParallaxBtnClicked) {
+        disableParallaxBtn.innerHTML = "enable Parallax"
+        parallaxStateMessage.innerHTML = "the parallax effect is disabled !"
+        h1TxtContent.innerHTML = 'Parallax Backgroud = "Off"'
+    } else {
+        disableParallaxBtn.innerHTML = "disable Parallax"
+        parallaxStateMessage.innerHTML = "the parallax effect is activated !"
+        h1TxtContent.innerHTML = 'Parallax Backgroud = "On"'
+    }
+
+    setTimeout(() => {
+        parallaxStateMessage.innerHTML = ""
+    }, 5000)
+})
 
 icons.forEach(icon => {
     icon.addEventListener("mouseenter", animateIcon)
@@ -32,20 +58,24 @@ function parallax(e) {
     const mouseX = e.clientX
     const mouseY = e.clientY
 
-    if (isCursorInElement(mouseX, mouseY, homeSection)) {
-        icons.forEach((icon) => {
-            const speed = parseFloat(icon.getAttribute("data-speed"))
-            const x = (window.innerWidth - mouseX * speed) / 80
-            const y = (window.innerHeight - mouseY * speed) / 80
-
-            icon.style.setProperty("--parallax-translate-x", `${x}px`)
-            icon.style.setProperty("--parallax-translate-y", `${y}px`)
-        })
+    if (disableParallaxBtnClicked === true) {
+        return
     } else {
-        icons.forEach((icon) => {
-            icon.style.setProperty("--parallax-translate-x", "0px")
-            icon.style.setProperty("--parallax-translate-y", "0px")
-        })
+        if (isCursorInElement(mouseX, mouseY, homeSection)) {
+            icons.forEach((icon) => {
+                const speed = parseFloat(icon.getAttribute("data-speed"))
+                const x = (window.innerWidth - mouseX * speed) / 80
+                const y = (window.innerHeight - mouseY * speed) / 80
+    
+                icon.style.setProperty("--parallax-translate-x", `${x}px`)
+                icon.style.setProperty("--parallax-translate-y", `${y}px`)
+            })
+        } else {
+            icons.forEach((icon) => {
+                icon.style.setProperty("--parallax-translate-x", "0px")
+                icon.style.setProperty("--parallax-translate-y", "0px")
+            })
+        }
     }
 }
 
