@@ -2,12 +2,12 @@ const icons = document.querySelectorAll(".backgroundIcon")
 const homeSection = document.getElementById("homeSection")
 const disableParallaxBtn = document.getElementById("disableParallaxBtn")
 const parallaxStateMessage = document.getElementById("parallaxStateMessage")
-const h1TxtContent = document.getElementById("h1TxtContent")
+const h2TxtContent = document.getElementById("h2TxtContent")
 
 let disableParallaxBtnClicked = false
 
 disableParallaxBtn.innerHTML = "disable Parallax"
-h1TxtContent.innerHTML = "Parallax Backgroud"
+h2TxtContent.innerHTML = "backgroud parallax effect"
 
 document.addEventListener("mousemove", parallax)
 
@@ -17,11 +17,11 @@ disableParallaxBtn.addEventListener("click", function() {
     if (disableParallaxBtnClicked) {
         disableParallaxBtn.innerHTML = "enable Parallax"
         parallaxStateMessage.innerHTML = "the parallax effect is disabled !"
-        h1TxtContent.innerHTML = 'Parallax Backgroud = "Off"'
+        h2TxtContent.innerHTML = 'Background parallax effect = "Off"'
     } else {
         disableParallaxBtn.innerHTML = "disable Parallax"
         parallaxStateMessage.innerHTML = "the parallax effect is activated !"
-        h1TxtContent.innerHTML = 'Parallax Backgroud = "On"'
+        h2TxtContent.innerHTML = 'Background parallax effect = "On"'
     }
 
     setTimeout(() => {

@@ -20,9 +20,14 @@ body {
     border-bottom: #fd7a00 solid 2px;
 }
 
-h1 {
+h2, h1 {
     color: #fd7a00;
     font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+h2 {
+    text-transform: uppercase;
 }
 
 #iconMainContainer {
@@ -288,7 +293,8 @@ a {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     font-size: 2rem;
-    color: #fd7a00;
+    color: white;
+    text-decoration: underline;
     font-weight: bolder;
     text-transform: uppercase;
 }
@@ -307,7 +313,7 @@ a {
         flex-direction: column;
     }
 
-    h1 {
+    h2 {
         margin-bottom: 1rem;
         text-align: center;
     }
@@ -320,7 +326,7 @@ a {
         display: none !important;
     }
 
-    h1 {
+    h2 {
         font-size: 3rem;
     }
 }
@@ -336,8 +342,12 @@ a {
         display: none;
     }   
 
-    h1 {
+    h2 {
         font-size: 4rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
     }
 
     #burgerMenuContentContainer {
